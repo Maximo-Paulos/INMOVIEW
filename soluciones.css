@@ -1,0 +1,287 @@
+/* ---------------------------------------------------------------------
+   REGLAS QUE YA EXISTÍAN (Header, Footer, Hero, etc.)
+   Se mantienen SIN CAMBIOS, salvo la sección de propiedades al final
+--------------------------------------------------------------------- */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff; /* Fondo */
+  color: #f2f2f2; /* Texto claro para contraste */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header (SIN CAMBIOS) */
+header {
+  background-color: #39b7ff;
+  padding: 20px 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: below;
+  margin-right: 25px;
+  margin-left: -15px;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+header .logo img {
+  max-width: 50px;
+  height: auto;
+}
+
+header nav ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin-left: 25px;
+}
+
+header nav ul li {
+  margin: 0 25px;
+  margin-top: -15px;
+  margin-left: 100px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0094f0;
+}
+
+/* Hero (SIN CAMBIOS) */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+.hero .btn {
+  padding: 15px 40px;
+  background-color: #0094f0;
+  color: #111;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+  background-color: #0094f0;
+  transform: translateY(-3px);
+}
+
+/* Sección de Características (SIN CAMBIOS) */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.feature-item {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #376ec7;
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+
+/* Footer (SIN CAMBIOS) */
+footer {
+  background-color: #7d7d7d;
+  color: #bbb;
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin-top: 10px;
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------------------------------
+   NUEVAS REGLAS PARA LA SECCIÓN DE PROPIEDADES
+   (Diseño más moderno y profesional)
+---------------------------------------------------------------------*/
+
+.properties {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* --- Título con estilo moderno --- */
+.properties h2 {
+  display: inline-block;              /* Para ajustar el fondo solo al texto */
+  padding: 10px 30px;
+  margin-bottom: 40px;
+  background: #fff;                   /* Fondo blanco */
+  color: #333;                        /* Texto oscuro */
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-left: 6px solid #007bff;     /* Barra de color en el lado izquierdo */
+  border-radius: 0 8px 8px 0;         /* Bordes redondeados en la derecha */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Contenedor de todas las cards */
+.properties-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar en la página */
+}
+
+/* Card individual */
+.property {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 350px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Título dentro de la card */
+.property h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Slider de imágenes */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+.slides img:nth-child(1) {
+  animation-delay: 0s;
+}
+.slides img:nth-child(2) {
+  animation-delay: 4s;
+}
+.slides img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .property {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .property {
+    width: 100%;
+  }
+}

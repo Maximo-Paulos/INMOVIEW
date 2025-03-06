@@ -1,0 +1,336 @@
+    /* Sección de Planes de Suscripción */
+    .subscription-plans {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .subscription-plans h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .plans-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plan h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .plan .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .plan ul li {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .btn-plan {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn-plan:hover {
+      background-color: #0056b3;
+    }
+
+    /* Resalta el plan más popular */
+    .plan.popular {
+      border: 2px solid #007bff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 123, 255, 0.2);
+    }
+
+
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff; /* Fondo oscuro para un toque lujoso */
+  color: #f2f2f2; /* Color de texto claro para contraste */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos del Header */
+header {
+  background-color: #39b7ff; /* Fondo oscuro */
+  padding: 20px 60px; /* Reduce el espacio vertical para que el header no esté tan alto */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea los items verticalmente */
+}
+
+header .logo {
+  display: flex;
+  align-items: below; /* Alinea el logo verticalmente */
+  margin-right: 25px; /* Padding a la derecha para alinear con los textos */
+  margin-left: -15px;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+header .logo img {
+  max-width: 50px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+header nav ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin-left: 25px; /* Alinea los enlaces de navegación con el logo */
+}
+
+header nav ul li {
+  margin: 0 25px;
+  margin-top: -15px;
+  margin-left: 100px;
+
+}
+
+header nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0094f0; /* Color al pasar el ratón */
+}
+
+/* Estilos de la Sección Hero */
+.hero {
+  height: 100vh;
+  background-image: url('gif.gif'); /* Sustituye con la ruta de tu gif */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtro oscuro para contraste */
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+.hero .btn {
+  padding: 15px 40px;
+  background-color: #0094f0; /* Dorado brillante */
+  color: #111;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+  background-color: #0094f0;
+  transform: translateY(-3px);
+}
+
+/* Estilos de la Sección de Características */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.feature-item {
+  max-width: 300px;
+}
+
+.feature-item h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #376ec7;
+
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  overflow-wrap: break-word;
+}
+
+/* Estilos del Footer */
+footer {
+  background-color: #7d7d7d;
+  color: #bbb;
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin-top: 10px;
+  overflow-wrap: break-word;
+}
+
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+.hero .btn {
+  padding: 15px 40px;
+  background-color: #0094f0;
+  color: #111;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+  background-color: #0094f0;
+  transform: translateY(-3px);
+}
+
+/* Estilos de la Sección de Características */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.feature-item {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+}
+
+.feature-item h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px; /* Ajustado para reducir el espacio */
+  color: #376ec7;
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  color: #000000;
+  line-height: 1.4; /* Ajuste de line-height para mejorar el espacio entre las líneas */
+  margin-bottom: 0; /* Eliminar el margen inferior innecesario */
+  overflow-wrap: break-word; /* Asegura que el texto no se salga del contenedor */
+}
+
+/* Estilos del Footer */
+footer {
+  background-color: #7d7d7d;
+  color: #bbb;
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin-top: 10px;
+}

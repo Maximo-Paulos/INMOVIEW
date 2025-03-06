@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Atención</title>
+  <link rel="stylesheet" href="form.css">
+  <style>
+    /* Estilos para el banner de confirmación */
+    .confirmation-banner {
+      max-width: 380px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      overflow-y: auto;
+      max-height: 80vh;
+      display: none; /* Se oculta por defecto */
+    }
+    .confirmation-banner a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .confirmation-banner a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo Replica Matterport">
+    </a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="soluciones.html">Proyectos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="login.html">LogIn/SignUp</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <section class="form-container">
+    <form id="atencionForm">
+      <h2>Completa tu información</h2>
+
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Ej: correo@ejemplo.com" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 1123456789" required>
+
+
+
+      <label for="nacionalidad">Nacionalidad:</label>
+      <select id="nacionalidad" name="nacionalidad" required>
+        <option value="">Selecciona tu país</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Chile">Chile</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Paraguay">Paraguay</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <!-- Nuevos campos agregados -->
+      <label for="inmobiliaria">Nombre de la Inmobiliaria:</label>
+      <input type="text" id="inmobiliaria" name="inmobiliaria" placeholder="Ej: Inmobiliaria Ejemplo" required>
+
+      <label for="sitioWeb">Sitio Web:</label>
+      <input type="url" id="sitioWeb" name="sitioWeb" placeholder="Ej: https://www.ejemplo.com">
+
+      <label for="cargo">Cargo en la empresa:</label>
+      <select id="cargo" name="cargo" required>
+        <option value="">Selecciona tu cargo</option>
+        <option value="Dueño/Socio">Dueño/Socio</option>
+        <option value="Gerente de Marketing">Gerente de Marketing</option>
+        <option value="Gerente de Operaciones">Gerente de Operaciones</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="ubicacion">Ubicación principal de las propiedades:</label>
+      <select id="ubicacion" name="ubicacion" required>
+        <option value="">Selecciona una ubicación</option>
+        <option value="CABA">CABA</option>
+        <option value="AMBA">AMBA (GBA Norte/Oeste/Sur)</option>
+        <option value="Interior">Interior de Argentina</option>
+        <option value="Otro">Otro país</option>
+      </select>
+
+      <label for="tiposPropiedades">Tipos de propiedades que maneja:</label>
+      <select id="tiposPropiedades" name="tiposPropiedades" required>
+        <option value="">Selecciona un tipo de propiedad</option>
+        <option value="Departamentos">Departamentos</option>
+        <option value="Casas residenciales">Casas residenciales</option>
+        <option value="Propiedades de lujo">Propiedades de lujo (>500k USD)</option>
+        <option value="Locales comerciales">Locales comerciales</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="motivo">Motivo de Atención:</label>
+      <textarea id="motivo" name="motivo" rows="4" placeholder="Describe el motivo de tu consulta..." required></textarea>
+
+      <button type="submit">Enviar Solicitud</button>
+    </form>
+  </section>
+
+  <!-- Banner de confirmación -->
+  <div id="confirmationBanner" class="confirmation-banner">
+    <p>Hola <span id="clientName">[Nombre del Cliente]</span>,</p>
+    <p>¡Gracias por unirte a InmoView Premium! A partir de hoy, tu inmobiliaria <span id="clientInmobiliaria">[Nombre de la Inmobiliaria]</span> está lista para vender más rápido, reducir costos y sorprender a tus clientes con experiencias digitales de alto impacto.</p>
+    <p><strong>Lo que puedes hacer AHORA mismo:</strong></p>
+    <ul>
+      <li>Subir tus primeras propiedades:</li>
+      <li>Accede a tu panel de control: <a href="login.html">Iniciar Sesión</a>.</li>
+      <li>Carga planos y detalles técnicos. Nuestro equipo se contactará en menos de 24hrs para coordinar el turno para realizar el tour 3D.</li>
+    </ul>
+    <p><strong>Beneficios que ya están activos</strong></p>
+    <ul>
+      <li>✅ Ahorro garantizado: Con tu plan <span id="clientPlan">[Nombre del Plan]</span>, pagas $<span id="clientCost">[Costo]</span>/mes por <span id="clientProp">[Número]</span> propiedades, un 40% menos que contratar servicios individuales.</li>
+      <li>✅ Soporte VIP: Tu gestor asignado, <span id="clientGestor">[Nombre del Gestor]</span>, está disponible en <span id="clientContact">[correo/teléfono]</span> para resolver dudas técnicas o estratégicas.</li>
+      <li>✅ Diferenciación inmediata: Tus listados ya muestran el sello "Experiencia 360° Certificada", que atrae un 70% más de leads según estudios de mercado.</li>
+    </ul>
+    <p>¿Preguntas? Estamos aquí para que tu inversión en InmoView Premium sea un éxito. Escríbenos a <a href="mailto:soporte@inmoview.com">soporte@inmoview.com</a> o responde a este correo.</p>
+    <p>¡A vender se ha dicho! 🚀</p>
+    <p>El equipo de InmoView</p>
+    <p>PD: Tu próxima factura se generará el <span id="clientFecha">[fecha]</span>. ¿Necesitas ajustar tu plan o agregar más propiedades? Haz <a href="#">clic aquí</a>.</p>
+    <p>👉 ¿Te gustaría compartir tu experiencia con otras inmobiliarias? Únete a nuestro programa de referidos y gana $200 USD por cada cliente que nos recomiendes. <a href="https://inmo360.com/referidos">Más información</a>.</p>
+    <p>
+      <a href="https://panel.inmo360.com/">Panel</a> | 
+      <a href="https://panel.inmo360.com/ajustes">Ajustes</a> | 
+      <a href="https://inmo360.com/referidos">Referidos</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Inmoview. Todos los derechos reservados. By:M.P</p>
+</footer>
+
+<script>
+  document.getElementById("atencionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Recoger datos del formulario para personalizar el mensaje (según se necesite)
+    var nombre = document.getElementById("nombre").value;
+    var inmobiliaria = document.getElementById("inmobiliaria").value;
+    // Actualizar campos en el banner
+    document.getElementById("clientName").textContent = nombre || "[Nombre del Cliente]";
+    document.getElementById("clientInmobiliaria").textContent = inmobiliaria || "[Nombre de la Inmobiliaria]";
+    // Se pueden agregar actualizaciones para otros campos, si es necesario
+
+    // Ocultar el formulario y mostrar el banner de confirmación
+    document.querySelector(".form-container").style.display = "none";
+    document.getElementById("confirmationBanner").style.display = "block";
+  });
+</script>
+
+</body>
+</html>

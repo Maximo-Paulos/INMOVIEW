@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmoview</title>
+
+  <!-- Favicon (logo en la pestaña del navegador) -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo Replica Matterport">
+    </a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="soluciones.html">Proyectos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="login.html">LogIn/SignUp</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="container">
+      <h2>Login</h2>
+
+      <form id="loginForm">
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="button" id="loginBtn">Iniciar sesión</button>
+        <p><a href="productos.html" id="showRegister">¿No tienes cuenta? Regístrate</a></p>
+      </form>
+
+      <form id="registerForm" class="hidden">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="button" id="loginBtn">Registrarse</button>
+        <p><a href="productos.html" id="showLogin">¿Ya tienes cuenta? Inicia sesión</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Inmoview. Todos los derechos reservados. By: M.P</p>
+</footer>
+
+<script>
+  document.getElementById("loginBtn").addEventListener("click", function() {
+    window.location.href = "productos.html"; // Redirige a otra página al iniciar sesión
+  });
+
+  document.getElementById("showRegister").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("loginForm").classList.add("hidden");
+    document.getElementById("registerForm").classList.remove("hidden");
+  });
+
+  document.getElementById("showLogin").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("registerForm").classList.add("hidden");
+    document.getElementById("loginForm").classList.remove("hidden");
+  });
+</script>
+
+</body>
+</html>
